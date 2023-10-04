@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ma314smith/etree"
+	"github.com/beevik/etree"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/ma314smith/etree"
+	"github.com/beevik/etree"
 )
 
 // SAMLv11 is an implentation of the Token interface for SAML v1.1 tokens

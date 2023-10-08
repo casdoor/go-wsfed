@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/ma314smith/signedxml"
+	"github.com/moov-io/signedxml"
 )
 
 // WSFed provides request and response handling for WS-Federation messages
@@ -130,7 +130,7 @@ func (w *WSFed) validateSignedXML(wresult string) error {
 		return err
 	}
 
-	err = validator.Validate()
+	_, err = validator.ValidateReferences()
 	if err != nil {
 		return err
 	}

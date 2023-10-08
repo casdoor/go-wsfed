@@ -3,7 +3,7 @@ package wsfed
 import (
 	"errors"
 
-	"github.com/ma314smith/etree"
+	"github.com/beevik/etree"
 )
 
 // Token abstracts the different assertions available for WS-Fed

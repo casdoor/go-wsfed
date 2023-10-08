@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"github.com/beevik/etree"
-	"github.com/ma314smith/signedxml"
+	"github.com/moov-io/signedxml"
 )
 
 // Config maintains the configuration for sending/receiving WSFed messages.
@@ -29,6 +29,7 @@ type Config struct {
 	MetadataRefreshIntervalSeconds time.Duration
 	Realm                          string
 	TrustedCerts                   []x509.Certificate
+	refIDAttribute                 string
 }
 
 func (c *Config) updateConfigFromMetadata() {
@@ -62,7 +63,8 @@ func (c *Config) validateMetadata(body string) (signingCert []x509.Certificate) 
 	if err != nil {
 		panic(err)
 	}
-	err = validator.Validate()
+	validator.SetReferenceIDAttribute(c.refIDAttribute)
+	_, err = validator.ValidateReferences()
 	if err != nil {
 		panic(err)
 	}

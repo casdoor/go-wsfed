@@ -1,6 +1,6 @@
 ## go-wsfed
 
-[![GoDoc](https://godoc.org/github.com/ma314smith/go-wsfed?status.svg)](https://godoc.org/github.com/ma314smith/go-wsfed)
+[![GoDoc](https://godoc.org/github.com/casdoor/go-wsfed?status.svg)](https://godoc.org/github.com/casdoor/go-wsfed)
 
 The `wsfed` package provides functionality for:
 - Generating a redirect url to an IDP
@@ -8,7 +8,7 @@ The `wsfed` package provides functionality for:
 
 ### Install
 
-`go get github.com/ma314smith/go-wsfed`
+`go get github.com/casdoor/go-wsfed`
 
 ### Examples
 

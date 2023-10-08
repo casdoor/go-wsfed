@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/ma314smith/go-wsfed"
+	"github.com/casdoor/go-wsfed"
 )
 
 var config wsfed.Config
